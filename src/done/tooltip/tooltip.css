@@ -1,0 +1,36 @@
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip-children {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 111, 0);
+    padding: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    width: max-content;
+    border-radius: 5px;
+    color: white;
+}
+
+.tooltip-children:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip::after {
+    content: '\25BC';
+    position: absolute;
+    top: 60%;
+    right: 50%;
+    color:rgb(255, 111, 0);
+    outline: 0;
+}

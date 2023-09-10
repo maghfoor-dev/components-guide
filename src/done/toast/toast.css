@@ -1,0 +1,47 @@
+.toasts {
+    /* background-color: red; */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    border-radius: 5px;
+    background-color: #F1C617;
+    color: BLACK;
+    position: relative;
+    padding: 0px 10px;
+    width: 300px;
+    animation-name: slidein;
+    animation-duration: 0.35s;
+    box-shadow: 0px 3px 2px 2px rgb(15, 15, 15);
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateX(100%);
+    }
+    60% {
+        transform: translateX(-15%);
+    }
+    80% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.close-button {
+    position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  color: black;
+}
+
